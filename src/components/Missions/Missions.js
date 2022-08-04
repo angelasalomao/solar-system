@@ -16,7 +16,7 @@ class Missions extends React.Component {
     ));
     return (
       <div div data-testid="missions">
-        <Title headline="Missões: " />
+        <Title headline="Missões" />
         {missionsList}
       </div>
     );
