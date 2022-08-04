@@ -2,6 +2,7 @@ import React from 'react';
 import Title from '../Title/Title';
 import missions from '../../data/missions';
 import MissionCard from '../MissionCard/MissionCard';
+import './Missions.css';
 
 class Missions extends React.Component {
   render() {
@@ -15,9 +16,11 @@ class Missions extends React.Component {
       />
     ));
     return (
-      <div div data-testid="missions">
+      <div data-testid="missions">
         <Title headline="Missões" />
-        {missionsList}
+        <div className="list-missions">
+          {missionsList}
+        </div>
       </div>
     );
   }

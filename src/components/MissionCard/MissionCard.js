@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import './MissionCard.css';
 
 class MissionCard extends React.Component {
   render() {
     const { name, year, country, destination } = this.props;
     return (
-      <div data-testid="mission-card">
-        <p data-testid="mission-name">Missão: {name}</p>
-        <p data-testid="mission-year">Ano: {year}</p>
-        <p data-testid="mission-country">Local: {country}</p>
-        <p data-testid="mission-destination">Destino: {destination}</p>
+      <div data-testid="mission-card" className="mission-card">
+        <p data-testid="mission-name" className="mission-title">{name}</p>
+        <div className="info-mission">
+          <p data-testid="mission-year">{year}</p>
+          <p data-testid="mission-country">{country}</p>
+          <p data-testid="mission-destination">{destination}</p>
+        </div>
       </div>
     );
   }
